@@ -1,19 +1,32 @@
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
-model=OllamaLLM(model="llama3.1")
+class ComicChatbot:
+    def __init__(self):
+        self.template= self.get_template()
+        self.prompt=prompt=ChatPromptTemplate.from_template(self.template)
+        self.model= OllamaLLM(model="llama3.1")
+        self.chain= self.prompt | self.model
 
-template =""" You are a helpful assistant that provides information about Comics(Marvel & DC). 
 
-Question:{question}
+    def get_template(self):
 
-Please do start with an answer with a comic joke related to the {question} 
+        template =""" You are a helpful assistant that provides information about Comics(Marvel & DC). 
 
-Answer: 
+        Question:{question}
 
-"""
-prompt=ChatPromptTemplate.from_template(template)
+        Please do start with an answer with a comic joke related to the {question} 
 
-chain = prompt | model                                    
+        Answer: 
 
-print(chain.invoke({"question: Who is Tony Stark"}))
+        """
+        return template
+    
+    def get_response(self,memory,question):
+        return self.chain.invoke({"memory":memory,"question":question})
+        
+
+
+
+
+

@@ -1,0 +1,3 @@
+langchain
+olama
+streamlit
