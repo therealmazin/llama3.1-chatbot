@@ -34,8 +34,9 @@ To build a conversational chatbot, this project uses the **Llama3.1** open-sourc
     streamlit run app.py
     ```
 ### Usage
+ 
 
-https://github.com/user-attachments/assets/486341c7-6fb5-46e9-8fb9-853118bdea1a
+https://github.com/user-attachments/assets/a05cd7d2-bfb2-4615-a3fc-28214648e745
 
 
 ## Acknowledgments
