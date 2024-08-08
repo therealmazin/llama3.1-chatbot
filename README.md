@@ -17,7 +17,7 @@ To build a conversational chatbot, this project uses the **Llama3.1** open-sourc
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/comic-chatbot.git
+    git clone https://github.com/therealmazin/comic-chatbot.git
     cd comic-chatbot
     ```
 
